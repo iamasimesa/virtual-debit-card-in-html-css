@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    width: 31.25rem;
+    height: 18.75rem;
+    color: #fff;
+    cursor: pointer;
+    perspective: 62.5rem;
+}
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front, .back {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0045c7, #FF2C7D);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.25rem 1.875rem;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+    }
+.img1 {
+width: 3.75rem;
+}
+.img2 {
+    width: 5rem;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.map-img {
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0.3;
+z-index: -1;
+}
+.card-no {
+    font-size: 2.1875rem;
+    margin-top: 3.75rem;
+    }
+.card-holder{
+    font-size: 0.75rem;
+    margin-top: 2.5rem;
+}
+.name {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+}
+
+/**********Card Back Area********/
+
+.bar {
+    background: #222;
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    height: 3.75rem;
+    margin-top: 0.625rem;
+}
+.card-cvv {
+    margin-top: 1.25rem;
+}
+.card-cvv div {
+    flex: 1;
+}
+.card-cvv img {
+    width: 100%;
+    display: block;
+    line-height: 0;
+    
+}
+.card-cvv p {
+    background: #fff;
+    color: #000;
+    font-size: 1.375rem;
+    padding: 0.625rem 1.25rem;
+}
+.card-text {
+    margin-top: 1.875rem;
+    font-size: 0.875rem;
+}
+.img3 {
+    width: 5rem;
+}
+.signature {
+    margin-top: 1.875rem;
+}
+.back {
+    transform: rotateY(180deg);
+}
+.card:hover .card-inner {
+    transform: rotateY(-180deg);
+}
